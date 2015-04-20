@@ -23,14 +23,14 @@
                 if (isXString) {
                     for (var i = 0; i < this.source.length; i++) {
                         retObject.data[i] = {
-                            'x': this.source[i][0],
+                            'x': parseInt(this.source[i][0]),
                             'y': this.source[i][1]
                         };
                     }
                 } else {
                     for (var j = 0; j < this.source.length; j++) {
                         retObject.data[j] = {
-                            'x': parseInt(this.source[j][0]),
+                            'x': this.source[j][0],
                             'y': this.source[j][1]
                         };
                     }
@@ -228,7 +228,7 @@
     readInFile();
     setTimeout(function() { //figure out a better solution to this
         console.log(frequencyData.getData());
-        frequencyData.createObject(false);
+        frequencyData.createObject(true);
     }, 3000);
 
 }());
